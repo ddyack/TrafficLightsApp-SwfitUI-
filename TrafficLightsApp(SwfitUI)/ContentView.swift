@@ -24,16 +24,10 @@ struct ContentView: View {
                 ColorCicle(color: .red, opacity: redOpaacity)
                 ColorCicle(color: .yellow, opacity: yellowOpaacity)
                 ColorCicle(color: .green, opacity: greenOpacity)
+                
                 Spacer()
                 
-                
-                Button(action: {buttonPressed()}, label: {
-                    Text(textButton).foregroundColor(.white)
-                })
-                .frame(width: 180, height: 60)
-                .background(Color(.blue))
-                .clipShape(Capsule())
-                .overlay(Capsule().stroke(Color.white, lineWidth: 5))
+                CountButton(title: textButton, completion: {buttonPressed()})
 
             }
         }
